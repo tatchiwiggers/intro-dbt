@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw_data_circle
+    description: raw dara circle sportswear from lw
+    tables:
+      - name: raw_cc_stock
+        description: stock of products
+      - name: raw_cc_sales
+        description: sales of products
+        tests:
+          - unique:
+            column_mame: "(product_id || '-' || date_date)"
+            
